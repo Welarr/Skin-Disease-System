@@ -40,14 +40,6 @@
 (printout t crlf crlf crlf " Are you suffering from skin swelling ? (yes | no) " crlf crlf " Your answer: " )
 (assert (ifYesNochoice11 (read))))
 
-;;------------------R120------------------
-(defrule Common_Skin_Diseases120
-(ifYesNochoice10 no)
-?retractChy <- (ifYesNochoice10 no)
-=>
-(retract ?retractChy)
-(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
-
 ;;------------------R12------------------
 (defrule Common_Skin_Diseases12
 (ifYesNochoice11 yes)
@@ -58,14 +50,6 @@
 (printout t crlf crlf crlf " Are you suffering from papules, blisters, oozing or crust skin ? (yes | no) " crlf crlf " Your answer: " )
 (assert (ifYesNochoice12 (read))))
 
-;;------------------R19------------------
-(defrule Common_Skin_Diseases19
-(ifYesNochoice12 no)
-?retractChy <- (ifYesNochoice12 no)
-=>
-(retract ?retractChy)
-(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
-
 ;;------------------R13------------------
 (defrule Common_Skin_Diseases13
 (ifYesNochoice12 yes)
@@ -74,28 +58,117 @@
 (retract ?retractChy)
 (printout t crlf crlf crlf" You are suffering from Eczema.. " crlf crlf " Remedy " crlf " Stop use of irritants such as Vaseline, mineral oils and soap. "crlf " Avoid extreme tempretures. "crlf " Avoid contact with wool. "crlf " Apply hydrocortisone cream until lesions clear. "crlf " Use antohistamines. "crlf crlf " Thank you for using our Program... "crlf crlf))
 
+
+;;------------------R141------------------
+(defrule Common_Skin_Diseases141
+(ifYesNochoice12 no)
+?retractChy <- (ifYesNochoice12 no)
+(not (ifYesNochoice141 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " Do you have fever ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice141 (read))))
+
+;;------------------R142------------------
+(defrule Common_Skin_Diseases142
+(ifYesNochoice141 yes)
+?retractChy <- (ifYesNochoice141 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf" You are suffering from Chicken pox.. " crlf crlf " Remedy " crlf " Calamine lotion or phenol-zinc lotion. "crlf " Antihistamine. "crlf " Use betadine scrub and chlorhexidine 1% mouthwash. "crlf crlf " Thank you for using our Program... "crlf crlf))
+
 ;;------------------R14------------------
 (defrule Common_Skin_Diseases14
-(ifYesNochoice12 no)
-?retractCh2 <- (ifYesNochoise12 no)
-(not (ifYesNochoice13 ?))
+(ifYesNochoice141 no)
+?retractChy <- (ifYesNochoice141 no)
+(not (ifYesNochoice153 ?))
 =>
-(retract ?retractCh2)
-(printout t crlf crlf crlf " Are you suffering from scaling at the periphery - face, arms or shoulders ? (Yes | No) " crlf crlf " Your answer: " )
-(assert (ifYesNochoice13 (read))))
+(retract ?retractChy)
+(printout t crlf crlf crlf " Are you suffering from scaling at the periphery - face, arms or shoulders ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice153 (read))))
 
 ;;------------------R15------------------
 (defrule Common_Skin_Diseases15
-(ifYesNochoice13 yes)
-?retractChy <- (ifYesNochoice13 yes)
+(ifYesNochoice153 yes)
+?retractChy <- (ifYesNochoice153 yes)
+(not (ifYesNochoice143 ?))
 =>
 (retract ?retractChy)
-(printout t crlf crlf crlf " You are suffering from Ringworm .. " crlf crlf " Thank you for using my Program... "crlf crlf ))
+(printout t crlf crlf crlf "Do you have round lesions ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice143 (read))))
 
-;;------------------R16------------------
-(defrule Common_Skin_Diseases16
-(ifYesNochoice13 no)
-?retractChy <- (ifYesNochoice13 no)
+;;------------------R180------------------
+(defrule Common_Skin_Diseases180
+(ifYesNochoice143 yes)
+?retractChy <- (ifYesNochoice143 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf" You are suffering from Ringworms.. " crlf crlf " Remedy " crlf " Whitefields ointment twice a day for a minimum of 4 weeks. "crlf " Griseofulvin 500mg once a day 2-6 weeks (adults); 10-15mg once a day 2–6 weeks (children). "crlf crlf " Thank you for using our Program... "crlf crlf))
+
+;;------------------R167------------------
+(defrule Common_Skin_Diseases167
+(ifYesNochoice143 no)
+?retractChy <- (ifYesNochoice143 no)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
+;;------------------R160------------------
+(defrule Common_Skin_Diseases160
+(ifYesNochoice153 no)
+?retractChy <- (ifYesNochoice153 no)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
+;;------------------R144------------------
+(defrule Common_Skin_Diseases144
+(ifYesNochoice11 no)
+?retractChy <- (ifYesNochoice11 no)
+(not (ifYesNochoice144 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " Are you suffering from scaling at the periphery - face, arms or shoulders ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice144 (read))))
+
+;;------------------R145------------------
+(defrule Common_Skin_Diseases145
+(ifYesNochoice144 no)
+?retractChy <- (ifYesNochoice144 no)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
+;;------------------R146------------------
+(defrule Common_Skin_Diseases146
+(ifYesNochoice144 yes)
+?retractChy <- (ifYesNochoice144 yes)
+(not (ifYesNochoice145 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " Are you suffering from round lesions ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice145 (read))))
+
+;;------------------R147------------------
+(defrule Common_Skin_Diseases147
+(ifYesNochoice145 no)
+?retractChy <- (ifYesNochoice145 no)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
+;;------------------R148------------------
+(defrule Common_Skin_Diseases148
+(ifYesNochoice145 yes)
+?retractChy <- (ifYesNochoice145 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf" You are suffering from Ringworms.. " crlf crlf " Remedy " crlf " Whitefields ointment twice a day for a minimum of 4 weeks. "crlf " Griseofulvin 500mg once a day 2-6 weeks (adults); 10-15mg once a day 2–6 weeks (children). "crlf crlf " Thank you for using our Program... "crlf crlf))
+
+;;------------------R120------------------
+(defrule Common_Skin_Diseases120
+(ifYesNochoice10 no)
+?retractChy <- (ifYesNochoice10 no)
 =>
 (retract ?retractChy)
 (printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
@@ -139,10 +212,64 @@
 (printout t crlf crlf crlf " Are you feeling itchness ? (yes | no) " crlf crlf " Your answer: " )
 (assert (ifYesNochoice22 (read))))
 
-;;------------------R25------------------
-(defrule Common_Skin_Diseases25
+;;------------------R241------------------
+(defrule Common_Skin_Diseases241
 (ifYesNochoice21 no)
 ?retractChy <- (ifYesNochoice21 no)
+(not (ifYesNochoice241 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " Do you have fever ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice241 (read))))
+
+;;------------------R242------------------
+(defrule Common_Skin_Diseases242
+(ifYesNochoice241 yes)
+?retractChy <- (ifYesNochoice241 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf" You are suffering from Chicken pox.. " crlf crlf " Remedy " crlf " Calamine lotion or phenol-zinc lotion. "crlf " Antihistamine. "crlf " Use betadine scrub and chlorhexidine 1% mouthwash. "crlf crlf " Thank you for using our Program... "crlf crlf))
+
+;;------------------R214------------------
+(defrule Common_Skin_Diseases214
+(ifYesNochoice241 no)
+?retractChy <- (ifYesNochoice241 no)
+(not (ifYesNochoice253 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " Are you suffering from scaling at the periphery - face, arms or shoulders ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice253 (read))))
+
+;;------------------R215------------------
+(defrule Common_Skin_Diseases215
+(ifYesNochoice253 yes)
+?retractChy <- (ifYesNochoice253 yes)
+(not (ifYesNochoice243 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have round lesions ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice243 (read))))
+
+;;------------------R280------------------
+(defrule Common_Skin_Diseases280
+(ifYesNochoice243 yes)
+?retractChy <- (ifYesNochoice243 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf" You are suffering from Ringworms.. " crlf crlf " Remedy " crlf " Whitefields ointment twice a day for a minimum of 4 weeks. "crlf " Griseofulvin 500mg once a day 2-6 weeks (adults); 10-15mg once a day 2–6 weeks (children). "crlf crlf " Thank you for using our Program... "crlf crlf))
+
+;;------------------R267------------------
+(defrule Common_Skin_Diseases267
+(ifYesNochoice243 no)
+?retractChy <- (ifYesNochoice243 no)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
+;;------------------R260------------------
+(defrule Common_Skin_Diseases260
+(ifYesNochoice253 no)
+?retractChy <- (ifYesNochoice253 no)
 =>
 (retract ?retractChy)
 (printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
@@ -296,6 +423,59 @@
 =>
 (retract ?retractChy)
 (printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
+;;------------------R542------------------
+(defrule Common_Skin_Diseases542
+(ifYesNochoice51 yes)
+?retractChy <- (ifYesNochoice51 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf" You are suffering from Chicken pox.. " crlf crlf " Remedy " crlf " Calamine lotion or phenol-zinc lotion. "crlf " Antihistamine. "crlf " Use betadine scrub and chlorhexidine 1% mouthwash. "crlf crlf " Thank you for using our Program... "crlf crlf))
+
+;;------------------R514------------------
+(defrule Common_Skin_Diseases514
+(ifYesNochoice51 no)
+?retractChy <- (ifYesNochoice51 no)
+(not (ifYesNochoice553 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " Are you suffering from scaling at the periphery - face, arms or shoulders ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice553 (read))))
+
+;;------------------R515------------------
+(defrule Common_Skin_Diseases515
+(ifYesNochoice553 yes)
+?retractChy <- (ifYesNochoice553 yes)
+(not (ifYesNochoice243 ?))
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf "Do you have round lesions ? (yes | no) " crlf crlf " Your answer: ")
+(assert (ifYesNochoice543 (read))))
+
+;;------------------R580------------------
+(defrule Common_Skin_Diseases580
+(ifYesNochoice543 yes)
+?retractChy <- (ifYesNochoice543 yes)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf" You are suffering from Ringworms.. " crlf crlf " Remedy " crlf " Whitefields ointment twice a day for a minimum of 4 weeks. "crlf " Griseofulvin 500mg once a day 2-6 weeks (adults); 10-15mg once a day 2–6 weeks (children). "crlf crlf " Thank you for using our Program... "crlf crlf))
+
+;;------------------R567------------------
+(defrule Common_Skin_Diseases567
+(ifYesNochoice543 no)
+?retractChy <- (ifYesNochoice543 no)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
+;;------------------R560------------------
+(defrule Common_Skin_Diseases560
+(ifYesNochoice253 no)
+?retractChy <- (ifYesNochoice253 no)
+=>
+(retract ?retractChy)
+(printout t crlf crlf crlf " You should be sure for your symptoms.. Try again..." crlf crlf " Thank you for using my Program... "crlf crlf ))
+
 
 ;;------------------R52------------------
 (defrule Common_Skin_Diseases52
