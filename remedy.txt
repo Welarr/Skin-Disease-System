@@ -1,0 +1,62 @@
+dis eczma
++Stop use of irritants such as Vaseline, mineral oils and soap
++Avoid extreme tempretures
++Avoid contact with wool
++Apply hydrocortisone cream until lesions clear
++Use antohistamines
+ENDDISEASE
+
+dis ringworm
++Apply Whitefields ointment twice a day for a minimum of 4 weeks
++ UseGriseofulvin 500mg once a day 2-6 weeks (adults); 10 -15mg once a day 2 – 6 weeks (children)
+ENDDISEASE
+
+dis athletesfoot
++Keep space in-between the toes dry eg dry skin thoroughly after washing, exposing to air, GV paint, cotton socks
++Use Imidazole/ Whitefields cream for 4 weeks
+ENDDISEASE
+
+dis thrush
++GV solution
++Potassium permanganate dressing
++Nystalin Ointment twice daily for 2 weeks
+ENDDISEASE
+
+dis chickenpox
++Calamine lotion or phenol-zinc lotion
++Antihistamine
++Use betadine scrub and chlorhexidine 1% mouthwash
+ENDDISEASE
+
+dis madurafoot
++Take patient to surgery to remove the small lesions
+ENDDISEASE
+
+dis impetigo
++Avoid sharing things such as clothes, towels, Vaseline
++Dress affected areas with GV, saline solution, betadine solution
++Don’t use Vaseline, use aqueous cream instead
++Doxacilin 250 mg / 4 times a day for 7-10 days
+ENDDISEASE
+
+dis erythrasma
++An imidazole cream twice daily for 4 weeks. 
+If not effective or recurrent infection, use:
+	-Erythromycin 250 mg 4 times daily for 2 weeks 
+	-Erythromycin 2% lotion twice daily for 4 weeks
+ENDDISEASE
+
+dis yaws
++Benzathine penicillin 2,4 million units per IM injection, repeat after two weeks. For children benzathine penicillin 1,2 million units per IM injection, repeat after two weeks. 
++In case of penicillin-allergy: Erythromycin 500 mg 4 times daily for 2 weeks.
+ENDDISEASE
+
+dis leprosy
++Rifampicine 600 mg once a month under supervision plus dapsone (DDS) 100 mg daily for 6 months unsupervised.
+ENDDISEASE
+
+dis noma
++Observe oral hygiene
++Doses of penicillin
++High protein diet
+ENDDISEASE

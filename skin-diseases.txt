@@ -1,0 +1,17 @@
+common-skin-diseases
+eczma "The patient suffers from Eczema."
+ringworm "The patient suffers from Ringworms."
+athletesfoot "The patient suffers from Athletes Foot."
+thrush "The patient suffers from Thrush."
+chickenpox "The patient suffers from Chicken Pox."
+madurafoot "The patient has Madura Foot. IMMEDIATE ATTENTION IS REQUIRED."
+impetigo "The patient suffers from Impetigo."
+erythrasma "The patient suffers from Erythrasma."
+yaws "The patient suffers from Yaws."'
+leprosy "The patient suffers from Leprosy.IMMEDIATE ATTENTION IS REQUIRED!!!"
+noma "The patient suffers from Noma."
+vitiligo "The patient has Vitiligo"
+herpes "The patient suffers from Herpes."
+
+
+

@@ -1,0 +1,72 @@
+eczema	
+skinRedness "Is the skin reddish in colour? (Yes | No) " 0.6
+skinSwollen "Is the skin swollen? (Yes | No)" 0.9
+skinPapules "Does the skin have papules? (Yes | No) " 0.8
+skinBlisters "Does the skin have papules? (Yes | No)" 0.7
+skinCrust "Is the skin oozing and having a dry crust? (Yes | No)" 0.8
+skinDry "Is the skin dry and scaly? (Yes | No)" 0.5
+ENDDISEASE
+
+ringworm
+roundLesions "Does patient have round lessions? (Yes | No)" 0.8
+skinDry "Are the lessions scaly at the periphery? (Yes | No)" 0.6
+skinItching "Is the skin itchy? (Yes | No)" 0.7
+lesionPlace "Are the lessions common on exposed surfaces such as the face, arms, shoulders? (Yes | No)" 0.6
+ENDDISEASE
+
+athletesfoot
+skinItching "Is the skin itchy? (Yes | No)" 0.5
+skinScaly "Are the lesions white and scaly? (Yes | No)" 0.6
+skinInflammation "Is the patients skin inflammed on the infected area? (Yes | No)" 0.8
+ENDDISEASE
+
+thrush 
+redMacules "Does the patient have red macules on the skin? (Yes | No)" 0.7
+pustules "Do the macules have pustules on their periphery? (Yes | No)" 0.65
+skinItching "Is the skin itchy and painful? (Yes | No)" 0.6
+areas "Are the macules on the lips and mouth? (Yes | No)" 0.9	
+ENDDISEASE
+
+chickenpox
+fever "Does the patient have fever? (Yes | No)" 0.7
+redMacules "Does the patient have red macules on the skin? (Yes | No)" 0.6
+skinItching "Is the skin itchy and painful? (Yes | No)"	0.7
+ENDDISEASE
+
+madurafoot
+roundLesions "Does patient have round lessions? (Yes | No)" 0.6
+lesionsFeet "Are the lesions majorly on the feet? (Yes | No)" 0.7
+nodules "Does the patient have painless subcutaneous nodules? (Yes | No)"  0.9
+puss "Are the nodules discharging pus with grains? (Yes | No)" 0.9
+ulcers "Is there formation of abcesses and ulcers? (Yes | No)" 0.9
+ENDDISEASE
+
+impetigo
+blisters "Are there blisters which are oozing? (Yes | No)" 0.6
+crust "Do the blisters have yellow crusts? (Yes | No)" 0.6
+ENDDISEASE
+
+erythrasma	
+plaques "Does the patient have dry, smooth, slightly creased or scaly demarcated reddish brown plaques? (Yes | No)" 0.7
+plaquesPlace "Are the plaques located in the groin, armpit or breasts? (Yes | No)" 0.8
+ENDDISEASE
+
+yaws	
+papule "Does the patient have wet, easily bleeding, raspberry-like papule or nodules that leave an atrophic scar? (Yes | No)" 0.9
+secondary "Are there secondary lesions appearing as generalised nodules, ulcerations? (Yes | No)" 0.85
+ENDDISEASE
+
+leprosy	
+sensation "Is there a loss of sensation? (Yes | No)" 0.8
+enlarge "Is there an enlargement of great auricular, ulnar and radiocutaneous nerves? (Yes | No)" 0.97
+nodules "Does the patient have patches or papules and nodules? (Yes | No)" 0.8
+skinDry "Does patient have dry skin with or without ulcers? (Yes | No)" 0.8
+bent "Are the patient fingers bent? (Yes | No)" 0.99
+ENDDISEASE
+
+noma	
+ulcer "Is there Peridontitis, then ulcerative stomatitis? (Yes | No)" 0.7
+tissue "Is there extensive sloughing of adjacent tissue to infected area? (Yes | No)" 0.75
+bone "Is there necrosis of bone? (Yes | No)" 0.85
+smell "Is the infected area foul-smelling and very painful? (Yes | No)" 0.88
+ENDDISEASE
